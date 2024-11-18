@@ -1,0 +1,155 @@
+body {
+    background-color: var(--neutral-main);
+    font-family: "Outfit", sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* padding: 0 10px; */
+}
+
+.card {
+    max-width: 234px;
+    background-color: var(--neutral-card);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.card .card-link {
+    position: relative;
+    display: flex;
+}
+
+.card .card-link .card-picture {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.card .card-link::before {
+    content: '';
+    background-color: var(--primary-medium);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.card .card-link::after {
+    content: '';
+    background: url(../images/icon-view.svg) no-repeat center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.card .card-link:hover::before {
+    opacity: 0.5;
+}
+.card .card-link:hover::after {
+    opacity: 1;
+}
+
+.card .title-link .title {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin: 12px 0 13px;
+}
+
+.card .title-link .title:hover {
+    color: var(--primary-medium);
+}
+
+.card .about {
+    color: var(--neutral-line);
+    font-size: 12px;
+    line-height:16.2px;
+    font-weight: 300;
+}
+
+.card .info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-bottom: 18px;
+}
+
+.card .info .price {
+    display: flex;
+    align-items: center;
+    color: var(--primary-medium);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.card .info .price::before {
+    content: '';
+    display: inline-block;
+    background-image: url(../images/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+}
+
+.card .info .countdown {
+    display: flex;
+    align-items: center;
+    color: var(--neutral-line);
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+.card .info .countdown::before {
+    content: '';
+    display: inline-block;
+    background-image: url(../images/icon-clock.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 11px;
+    width: 11px;
+    margin-right: 5px;
+}
+
+.card .author {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--neutral-line);
+    padding: 10px 0 5px;
+}
+
+.card .author .author-picture {
+    max-width: 23px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 9px;
+}
+
+.card .author .author-info {
+    font-size: 11px;
+}
+
+.card .author .author-info {
+    color: var(--neutral-line);
+}
+
+.card .author .author-info .author-link {
+    color: white;
+}
+
+.card .author .author-info .author-link:hover {
+    color: var(--primary-medium);
+}
